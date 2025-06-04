@@ -1,0 +1,23 @@
+.App {
+  min-height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.main {
+  margin: 0 auto;
+
+  border-radius: 8px;
+
+  padding: 24px;
+
+  background-color: #222222;
+
+  max-width: 800px;
+  width: 100%;
+  min-height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+}

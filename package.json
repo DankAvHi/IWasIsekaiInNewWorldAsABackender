@@ -1,0 +1,29 @@
+{
+  "name": "i-was-isekai-in-new-world-as-a-backender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "node --watch --env-file=.env -r ts-node/register src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.29",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.8.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@prisma/client": "6.8.2",
+    "@types/cors": "^2.8.18",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "octokit": "^5.0.3"
+  }
+}

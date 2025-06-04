@@ -1,0 +1,4 @@
+export const ENVIRONMENT_VARIABLES = [
+  "DATABASE_URL",
+  "GITHUB_ACCESS_TOKEN",
+] as const;

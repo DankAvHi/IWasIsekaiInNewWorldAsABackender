@@ -1,0 +1,25 @@
+.RepoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.refresh {
+  border-radius: 8px;
+
+  padding: 12px;
+
+  background-color: black;
+}
+.refresh:disabled {
+  background-color: gray;
+}
