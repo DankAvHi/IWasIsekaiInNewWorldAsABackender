@@ -22,7 +22,7 @@ export const getTrendingReposFromGithubApi = async () => {
     fetchedRepos.forEach((repo: any) => {
       convertedRepos.push({
         raw: repo,
-        name: repo.full_name,
+        name: repo.name,
         id: repo.id,
         stars: repo.stargazers_count,
         url: repo.html_url,

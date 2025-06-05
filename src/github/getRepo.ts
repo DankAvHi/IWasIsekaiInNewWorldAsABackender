@@ -8,7 +8,6 @@ export const getRepo = async (nameOrId: string | number) => {
       },
     });
   }
-
   return await prisma.repo.findUnique({
     where: {
       name: nameOrId,

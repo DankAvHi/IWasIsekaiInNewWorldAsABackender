@@ -1,0 +1,30 @@
+.RepoSearch {
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.input {
+  border-radius: 8px;
+
+  padding: 8px 12px;
+
+  background-color: rgb(22, 22, 22);
+
+  width: 100%;
+}
+.button {
+  border-radius: 8px;
+
+  padding: 8px 12px;
+
+  background-color: black;
+}

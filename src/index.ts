@@ -20,20 +20,21 @@ app.get("/", async (_req, res) => {
     res.status(500).json(e);
   }
 });
-app.post("/find-one", async (req, res) => {
+app.get("/repo/:name", async (req, res) => {
   try {
-    const { nameOrId } = req.body;
-    if (!nameOrId) {
+    const { name } = req.params;
+    if (!name) {
       res.status(404).json({ message: "Name or id is missing" });
     }
-    res.json(await getRepo(nameOrId));
+    res.json(await getRepo(name));
   } catch (e) {
     console.error(e);
     res.status(500).json(e);
   }
 });
-app.post("/sync", async (_req, res) => {
+app.get("/sync", async (_req, res) => {
   try {
+    console.log("Syncing...");
     res.json({ success: await syncTrendingReposWithDatabase() });
   } catch (e) {
     console.error(e);

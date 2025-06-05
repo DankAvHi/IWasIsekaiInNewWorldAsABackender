@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Typography } from "../../../../shared/ui";
 import { getTrendingRepos, syncTrendingRepos } from "../../api";
 import { RepoCard } from "../RepoCard";
+import { RepoSearch } from "../RepoSearch";
 import styles from "./RepoGrid.module.css";
 
 export const RepoGrid: React.FC = () => {
@@ -50,6 +51,7 @@ export const RepoGrid: React.FC = () => {
           className={styles.refresh}
         >{`Обновить список`}</button>
       </div>
+      <RepoSearch />
       <div className={styles.container}>
         {!repos ? (
           <Typography>{`Загрузка...`}</Typography>
