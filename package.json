@@ -4,16 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "node --watch --env-file=.env -r ts-node/register src/index.ts"
+    "start:dev": "node --watch --env-file=.env -r ts-node/register src/index.ts",
+    "build": "node --env-file=.env ./build.mjs",
+    "build:prod": "NODE_ENV=production node --env-file=.env ./build.mjs",
+    "start": "node --env-file=.env dist/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^5.0.2",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.15.29",
     "@types/node-schedule": "^2.1.7",
+    "esbuild": "^0.25.5",
+    "fs-extra": "^11.3.0",
     "nodemon": "^3.1.10",
     "prisma": "^6.8.2",
     "ts-node": "^10.9.2",

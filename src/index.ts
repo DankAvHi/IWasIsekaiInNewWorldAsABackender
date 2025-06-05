@@ -13,7 +13,14 @@ if (!isEnvironmentVariablesExisted)
 
 const app = Express();
 app.use(cors());
-app.get("/", async (_req, res) => {
+
+app.use(Express.static("client/dist"));
+
+app.get("/", (_req, res) => {
+  res.sendFile("index.html", { root: "client/dist" });
+});
+
+app.get("/api/repo", async (_req, res) => {
   try {
     res.json(await getTrendingRepos());
   } catch (e) {
@@ -21,7 +28,7 @@ app.get("/", async (_req, res) => {
     res.status(500).json(e);
   }
 });
-app.get("/repo/:name", async (req, res) => {
+app.get("/api/repo/:name", async (req, res) => {
   try {
     const { name } = req.params;
     if (!name) {
@@ -33,7 +40,7 @@ app.get("/repo/:name", async (req, res) => {
     res.status(500).json(e);
   }
 });
-app.get("/sync", async (_req, res) => {
+app.get("/api/sync", async (_req, res) => {
   try {
     console.log("Syncing...");
     res.json({ success: await syncTrendingReposWithDatabase() });

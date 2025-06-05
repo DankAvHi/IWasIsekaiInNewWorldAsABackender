@@ -1,6 +1,6 @@
 export const getTrendingRepos = async () => {
   try {
-    const response = await fetch("http://localhost:8080", {
+    const response = await fetch("http://localhost:8080/api/repo", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
