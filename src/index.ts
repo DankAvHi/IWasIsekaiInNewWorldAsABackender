@@ -1,5 +1,6 @@
 import cors from "cors";
 import Express from "express";
+import schedule from "node-schedule";
 import { preloadEnvironmentVariables } from "./config";
 import { getTrendingRepos } from "./github";
 import { getRepo } from "./github/getRepo";
@@ -39,6 +40,19 @@ app.get("/sync", async (_req, res) => {
   } catch (e) {
     console.error(e);
     res.status(500).json(e);
+  }
+});
+
+const rule = new schedule.RecurrenceRule();
+rule.minute = new schedule.Range(0, 59, 5);
+
+schedule.scheduleJob(rule, async () => {
+  console.log("Running scheduled job: Syncing trending repos with database...");
+  try {
+    await syncTrendingReposWithDatabase();
+    console.log("Scheduled job: Sync completed successfully.");
+  } catch (e) {
+    console.error("Scheduled job: Error during sync:", e);
   }
 });
 

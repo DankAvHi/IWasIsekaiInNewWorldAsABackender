@@ -13,6 +13,7 @@
   "devDependencies": {
     "@types/express": "^5.0.2",
     "@types/node": "^22.15.29",
+    "@types/node-schedule": "^2.1.7",
     "nodemon": "^3.1.10",
     "prisma": "^6.8.2",
     "ts-node": "^10.9.2",
@@ -24,6 +25,7 @@
     "@types/cors": "^2.8.18",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "node-schedule": "^2.1.1",
     "octokit": "^5.0.3"
   }
 }
