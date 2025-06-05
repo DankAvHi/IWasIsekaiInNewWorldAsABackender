@@ -1,0 +1,10 @@
+{
+  "name": "repo-cli-standalone",
+  "version": "1.0.0",
+  "description": "Standalone CLI to interact with the repository backend service",
+  "type": "module",
+  "main": "cli.js",
+  "bin": {
+    "repo-cli": "./cli.js"
+  }
+}

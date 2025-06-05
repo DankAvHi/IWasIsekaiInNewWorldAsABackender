@@ -8,6 +8,7 @@
     "build": "node --env-file=.env ./build.mjs",
     "build:prod": "NODE_ENV=production node --env-file=.env ./build.mjs",
     "start": "node --env-file=.env dist/server.js"
+    
   },
   "keywords": [],
   "author": "",
